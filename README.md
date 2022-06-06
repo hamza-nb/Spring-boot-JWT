@@ -70,7 +70,7 @@ parameters:
 
 This second endpoint allows you to upload the JSON file generated in #1. The file must be imported into the database by checking for duplicates on the email address and the username (unique). A JSON response should be returned summarizing the total number of records, successfully imported, and not imported. Before recording in the database, the password must be encoded and not stored in clear text.
 
-1. authentication + JWT generation
+3. authentication + JWT generation
 
 method: POST
 
@@ -90,7 +90,7 @@ This 3rd endpoint is used to authenticate a user and generate a valid JWT token.
 
 The generated JWT must contain the user's email. To authenticate, it is possible to enter in the username field either the username or the email contained in the imported JSON file.
 
-1. Viewing the profile
+4. Viewing the profile
 
 method: GET
 
@@ -100,7 +100,7 @@ secured: yes
 
 This 4th endpoint allows the use of the JWT token to securely access the associated user profile.
 
-1. Viewing any profile with root privilege 
+5. Viewing any profile with root privilege 
 
 method: GET
 
