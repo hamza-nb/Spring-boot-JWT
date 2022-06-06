@@ -90,7 +90,7 @@ This 3rd endpoint is used to authenticate a user and generate a valid JWT token.
 
 The generated JWT must contain the user's email. To authenticate, it is possible to enter in the username field either the username or the email contained in the imported JSON file.
 
-1. Consultation de mon profil
+1. Viewing the profile
 
 method: GET
 
@@ -98,9 +98,9 @@ url: /api/users/me
 
 secured: yes
 
-Ce 4e endpoint permet d&#39;utiliser le jeton JWT pour accéder de façon sécurisée au profil de l&#39;utilisateur associé.
+This 4th endpoint allows the use of the JWT token to securely access the associated user profile.
 
-1. Consultation de mon profil
+1. Viewing any profile with root privilege 
 
 method: GET
 
@@ -108,4 +108,4 @@ url: /api/users/{username}
 
 sécurisée: oui
 
-Lorsque le JWT utilisé correspond à un utilisateur ayant le rôle admin, il est possible de consulter le profil de n&#39;importe quel autre utilisateur. Un utilisateur n&#39;ayant pas le rôle admin ne peut donc pas accéder au profil d&#39;un autre utilisateur
+When the JWT used corresponds to a user with the admin role, it is possible to consult the profile of any other user. A user who does not have the admin role cannot therefore access the profile of another user
